@@ -1,0 +1,45 @@
+<div class="container">
+  <h1>ngx-simplemde-wrapper - Demo</h1>
+  <p>A lightweight Angular wrapper around simplemde - <a href="https://github.com/Ahmed3lmallah/ngx-simplemde-wrapper">Documentation</a></p>
+ 
+  <h2>SimpleMDE -Markdown Editor (default)</h2>
+  
+  <textarea id="textarea-1" placeholder="Add text here..." (SimpleMDE)="model = $event" [SimpleMDE]="model"></textarea>
+  
+  <h3>Stringified Model</h3>
+  
+  <div style="border: solid 1px; padding: 5px; margin:5px;min-height:50px">
+    <p>{{JSON.stringify(model)}}</p>
+  </div>
+
+  <br>
+  <h2>Two-way binding</h2>
+  <p>The event binding `(SimpleMDE)` ensures that changes made in the editor are reflected on the model. Of course, any method can be used onChanges rather than just setting the model=$event
+    <br> 
+    <br>
+    Additionally, adjusting the model programmatically should be reflected on the editor. That is where the property binding `[SimpleMDE]` comes handy. 
+    <br>
+    <br>
+    Try it out... The button below sets the model to an empty string.</p>
+  
+  <button (click)="model=''">Delete the model</button>
+
+  <br>
+  <br>
+  <h2>Customized toolbar</h2>
+  <p>Custom configuration can be applied to any editor using the directive input `[options]="customOptions"`, where customOptions is an object of type `SimpleMdEOptions`
+    <br>
+    <br>
+    For a full list of options, please refere to the <a href="https://github.com/Ahmed3lmallah/ngx-simplemde-wrapper">documentation</a>
+  </p>
+  
+  <textarea id="textarea-2" placeholder="Add text here..." (SimpleMDE)="model2 = $event" [SimpleMDE]="model2" [options]="customOptions"></textarea>
+
+  <h2>Hidden toolbar and status bar</h2>
+  <textarea id="textarea-3" placeholder="Add text here..." (SimpleMDE)="model3 = $event" [SimpleMDE]="model3" [options]="customOptions2"></textarea>
+  
+  <br>
+  <br>
+  <h2>Editor with preloaded data</h2>
+  <textarea id="textarea-4" placeholder="Add text here..." (SimpleMDE)="model4 = $event" [SimpleMDE]="model4"></textarea>
+</div>
