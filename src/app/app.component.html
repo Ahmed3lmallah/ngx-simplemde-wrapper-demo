@@ -4,12 +4,12 @@
  
   <h2>SimpleMDE -Markdown Editor (default)</h2>
   
-  <textarea id="textarea-1" placeholder="Add text here..." (SimpleMDE)="model = $event" [SimpleMDE]="model"></textarea>
+  <textarea id="textarea-1" placeholder="Add text here..." (SimpleMDE)="model1 = $event" [SimpleMDE]="model1"></textarea>
   
   <h3>Stringified Model</h3>
   
   <div style="border: solid 1px; padding: 5px; margin:5px;min-height:50px">
-    <p>{{JSON.stringify(model)}}</p>
+    <p>{{JSON.stringify(model1)}}</p>
   </div>
 
   <br>
@@ -22,7 +22,7 @@
     <br>
     Try it out... The button below sets the model to an empty string.</p>
   
-  <button (click)="model=''">Delete the model</button>
+  <button (click)="model1=''">Delete the model</button>
 
   <br>
   <br>
@@ -33,7 +33,7 @@
     For a full list of options, please refere to the <a href="https://github.com/Ahmed3lmallah/ngx-simplemde-wrapper">documentation</a>
   </p>
   
-  <textarea id="textarea-2" placeholder="Add text here..." (SimpleMDE)="model2 = $event" [SimpleMDE]="model2" [options]="customOptions"></textarea>
+  <textarea id="textarea-2" placeholder="Add text here..." (SimpleMDE)="model2 = $event" [SimpleMDE]="model2" [options]="customOptions1"></textarea>
 
   <h2>Hidden toolbar and status bar</h2>
   <textarea id="textarea-3" placeholder="Add text here..." (SimpleMDE)="model3 = $event" [SimpleMDE]="model3" [options]="customOptions2"></textarea>
